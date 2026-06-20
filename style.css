@@ -1,15 +1,12 @@
 :root{
   --pink:#ffd6ec;
-  --pink2:#ffbfe3;
   --purple:#d8c7ff;
   --navy:#171833;
   --deep:#0d102b;
   --gold:#fff0b3;
   --white:#fffaff;
 }
-
 *{box-sizing:border-box}
-
 body{
   margin:0;
   min-height:100vh;
@@ -21,12 +18,8 @@ body{
     linear-gradient(180deg, var(--deep), var(--navy) 48%, #2d1b45);
   overflow-x:hidden;
 }
-
 .sky{position:fixed; inset:0; pointer-events:none; overflow:hidden; z-index:0}
-
-.stars,
-.stars:before,
-.stars:after{
+.stars,.stars:before,.stars:after{
   content:"";
   position:absolute;
   inset:0;
@@ -39,10 +32,8 @@ body{
   animation:twinkle 4s infinite alternate;
   opacity:.75;
 }
-
 .stars:before{filter:blur(.5px); opacity:.55; animation-duration:6s}
 .stars:after{filter:blur(1px); opacity:.35; animation-duration:8s}
-
 .moon{
   position:absolute;
   top:70px;
@@ -54,7 +45,6 @@ body{
   box-shadow:0 0 35px rgba(255,240,179,.75), 0 0 90px rgba(255,214,236,.35);
   animation:moonGlow 3.5s ease-in-out infinite alternate;
 }
-
 .moon:after{
   content:"";
   position:absolute;
@@ -65,7 +55,6 @@ body{
   border-radius:50%;
   background:#111433;
 }
-
 .shooting-star{
   position:absolute;
   top:18%;
@@ -77,7 +66,6 @@ body{
   animation:shoot 9s linear infinite;
   opacity:.9;
 }
-
 .wrap{
   position:relative;
   z-index:1;
@@ -85,12 +73,7 @@ body{
   margin:0 auto;
   padding:60px 0 80px;
 }
-
-.hero{
-  text-align:center;
-  padding:54px 22px 34px;
-}
-
+.hero{text-align:center; padding:54px 22px 34px}
 .badge{
   display:inline-block;
   padding:8px 16px;
@@ -102,25 +85,13 @@ body{
   letter-spacing:.08em;
   backdrop-filter:blur(8px);
 }
-
 h1{
   margin:22px 0 10px;
   font-size:clamp(2.1rem, 6vw, 4.8rem);
   text-shadow:0 0 20px rgba(255,214,236,.65);
 }
-
-.hero p{
-  margin:0;
-  color:#f8dff2;
-  font-size:1.08rem;
-}
-
-.search-box{
-  display:flex;
-  justify-content:center;
-  margin:18px 0 28px;
-}
-
+.hero p{margin:0; color:#f8dff2; font-size:1.08rem}
+.search-box{display:flex; justify-content:center; margin:18px 0 28px}
 input{
   width:min(560px, 100%);
   padding:17px 22px;
@@ -132,13 +103,11 @@ input{
   box-shadow:0 14px 35px rgba(0,0,0,.24), 0 0 0 3px rgba(255,214,236,.22);
   font-size:1rem;
 }
-
 .list{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
   gap:18px;
 }
-
 .card,.empty{
   min-height:120px;
   padding:22px;
@@ -148,12 +117,7 @@ input{
   box-shadow:0 20px 55px rgba(0,0,0,.22);
   backdrop-filter:blur(12px);
 }
-
-.card h2{
-  margin:0 0 14px;
-  color:var(--gold);
-}
-
+.card h2{margin:0 0 14px; color:var(--gold)}
 .item{
   display:flex;
   justify-content:space-between;
@@ -161,14 +125,8 @@ input{
   padding:9px 0;
   border-bottom:1px dashed rgba(255,255,255,.22);
 }
-
 .item:last-child{border-bottom:0}
-
-.count{
-  color:var(--pink);
-  font-weight:900;
-}
-
+.count{color:var(--pink); font-weight:900}
 .empty{
   grid-column:1/-1;
   display:flex;
@@ -177,11 +135,7 @@ input{
   text-align:center;
   color:#f8dff2;
 }
-
-@keyframes twinkle{
-  from{opacity:.35}
-  to{opacity:.9}
-}
+@keyframes twinkle{from{opacity:.35} to{opacity:.9}}
 @keyframes moonGlow{
   from{box-shadow:0 0 25px rgba(255,240,179,.55),0 0 70px rgba(255,214,236,.22)}
   to{box-shadow:0 0 45px rgba(255,240,179,.9),0 0 110px rgba(255,214,236,.42)}
@@ -191,7 +145,6 @@ input{
   76%{opacity:1}
   100%{transform:translateX(140vw) translateY(45vh) rotate(-20deg); opacity:0}
 }
-
 @media(max-width:640px){
   .moon{width:90px;height:90px;right:6%;top:42px}
   .moon:after{width:85px;height:85px;left:25px;top:10px}
